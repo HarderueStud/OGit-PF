@@ -1,0 +1,188 @@
+# dune runtest test/commands
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/harderue/Desktop/projet-pf-2022-2023-ogit
+# Auto-detected concurrency: 8
+$ /home/harderue/.opam/default/bin/ocamlc.opt -config > /tmp/dune_f83b8d_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/home/harderue/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/home/harderue/.opam/default/bin"
+#  ; ocaml = Ok External "/home/harderue/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/home/harderue/.opam/default/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/harderue/.opam/default/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/harderue/.opam/default/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/harderue/.opam/default/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/harderue/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/harderue/.opam/default/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/home/harderue/Desktop/projet-pf-2022-2023-ogit"
+#        ; "INSIDE_DUNE" :
+#            "/home/harderue/Desktop/projet-pf-2022-2023-ogit/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/harderue/Desktop/projet-pf-2022-2023-ogit/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/harderue/Desktop/projet-pf-2022-2023-ogit/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/harderue/Desktop/projet-pf-2022-2023-ogit/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/harderue/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default = "/home/harderue/.opam/default/lib/ocaml"
+#      ; standard_library = "/home/harderue/.opam/default/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I ogit/lib/.ogitlib.objs/byte -no-alias-deps -opaque -o ogit/lib/.ogitlib.objs/byte/ogitlib.cmo -c -impl ogit/lib/ogitlib.ml-gen)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamldep.opt -modules -intf ogit/lib/logs.mli) > _build/default/ogit/lib/.ogitlib.objs/logs.mli.d
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamldep.opt -modules -intf ogit/lib/objects.mli) > _build/default/ogit/lib/.ogitlib.objs/objects.mli.d
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamldep.opt -modules -impl ogit/lib/commands.ml) > _build/default/ogit/lib/.ogitlib.objs/commands.ml.d
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamldep.opt -modules -impl ogit/lib/objects.ml) > _build/default/ogit/lib/.ogitlib.objs/objects.ml.d
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamldep.opt -modules -intf ogit/lib/commands.mli) > _build/default/ogit/lib/.ogitlib.objs/commands.mli.d
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I ogit/lib/.ogitlib.objs/byte -I ogit/lib/.ogitlib.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o ogit/lib/.ogitlib.objs/native/ogitlib.cmx -c -impl ogit/lib/ogitlib.ml-gen)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamldep.opt -modules -impl ogit/lib/logs.ml) > _build/default/ogit/lib/.ogitlib.objs/logs.ml.d
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I ogit/lib/.ogitlib.objs/byte -no-alias-deps -opaque -open Ogitlib -o ogit/lib/.ogitlib.objs/byte/ogitlib__Logs.cmi -c -intf ogit/lib/logs.mli)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I ogit/lib/.ogitlib.objs/byte -no-alias-deps -opaque -open Ogitlib -o ogit/lib/.ogitlib.objs/byte/ogitlib__Objects.cmi -c -intf ogit/lib/objects.mli)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I ogit/lib/.ogitlib.objs/byte -no-alias-deps -opaque -open Ogitlib -o ogit/lib/.ogitlib.objs/byte/ogitlib__Commands.cmi -c -intf ogit/lib/commands.mli)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I ogit/test/commands/.test_commands.eobjs/byte -I ogit/lib/.ogitlib.objs/byte -no-alias-deps -opaque -o ogit/test/commands/.test_commands.eobjs/byte/dune__exe__Test_commands.cmi -c -intf ogit/test/commands/test_commands.mli)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I ogit/lib/.ogitlib.objs/byte -I ogit/lib/.ogitlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Ogitlib -o ogit/lib/.ogitlib.objs/native/ogitlib__Logs.cmx -c -impl ogit/lib/logs.ml)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I ogit/lib/.ogitlib.objs/byte -I ogit/lib/.ogitlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Ogitlib -o ogit/lib/.ogitlib.objs/native/ogitlib__Objects.cmx -c -impl ogit/lib/objects.ml)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I ogit/lib/.ogitlib.objs/byte -I ogit/lib/.ogitlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Ogitlib -o ogit/lib/.ogitlib.objs/native/ogitlib__Commands.cmx -c -impl ogit/lib/commands.ml)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I ogit/test/commands/.test_commands.eobjs/byte -I ogit/test/commands/.test_commands.eobjs/native -I ogit/lib/.ogitlib.objs/byte -I ogit/lib/.ogitlib.objs/native -intf-suffix .ml -no-alias-deps -opaque -o ogit/test/commands/.test_commands.eobjs/native/dune__exe__Test_commands.cmx -c -impl ogit/test/commands/test_commands.ml)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o ogit/lib/ogitlib.cmxa ogit/lib/.ogitlib.objs/native/ogitlib.cmx ogit/lib/.ogitlib.objs/native/ogitlib__Objects.cmx ogit/lib/.ogitlib.objs/native/ogitlib__Logs.cmx ogit/lib/.ogitlib.objs/native/ogitlib__Commands.cmx)
+$ (cd _build/default && /home/harderue/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o ogit/test/commands/test_commands.exe /home/harderue/.opam/default/lib/ocaml/unix.cmxa -I /home/harderue/.opam/default/lib/ocaml ogit/lib/ogitlib.cmxa ogit/test/commands/.test_commands.eobjs/native/dune__exe__Test_commands.cmx)
+$ (cd _build/default/ogit/test/commands && ./test_commands.exe) > _build/default/ogit/test/commands/test_commands.output
+$ /usr/bin/git --no-pager diff --no-index --color=always -u _build/default/ogit/test/commands/test_commands.expected _build/default/ogit/test/commands/test_commands.output
+> diff --git a/_build/default/ogit/test/commands/test_commands.expected b/_build/default/ogit/test/commands/test_commands.output
+> index b49f3fd..8d00a2f 100644
+> --- a/_build/default/ogit/test/commands/test_commands.expected
+> +++ b/_build/default/ogit/test/commands/test_commands.output
+> @@ -72,11 +72,10 @@ NOMBRE DE LOGS : 3
+>  
+>  NOMBRE HEAD : 1
+>  
+> -NOMBRE PARENTS : 2
+> +NOMBRE PARENTS : 1
+>  
+>  EXECUTION DE LA COMMANDE SHELL tree
+>  .
+> -├── empty.txt
+>  ├── foo
+>  │   ├── bar
+>  │   │   └── tata.txt
+> @@ -85,24 +84,21 @@ EXECUTION DE LA COMMANDE SHELL tree
+>  │   └── toto.txt
+>  └── toto.txt
+>  
+> -2 directories, 6 files
+> +2 directories, 5 files
+>  
+>  CONFLIT SUR empty.txt
+>  
+>  EXECUTION de ogit_merge
+> -CONFLICT (object): Merge conflict in ./empty.txt
+> -Automatic merge failed; fix conflicts and then commit the result
+>  
+> -NOMBRE DE LOGS : 3
+> +NOMBRE DE LOGS : 4
+>  
+> -NOMBRE HEAD : 2
+> +NOMBRE HEAD : 1
+>  
+> -NOMBRE PARENTS : 0
+> +NOMBRE PARENTS : 1
+>  
+>  EXECUTION DE LA COMMANDE SHELL tree
+>  .
+> -├── empty.txt..cl
+> -├── empty.txt..cr
+> +├── empty.txt
+>  ├── foo
+>  │   ├── bar
+>  │   │   └── tata.txt
+> @@ -110,4 +106,4 @@ EXECUTION DE LA COMMANDE SHELL tree
+>  │   └── toto.txt
+>  └── toto.txt
+>  
+> -2 directories, 6 files
+> +2 directories, 5 files
+[1]

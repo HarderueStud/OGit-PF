@@ -1,0 +1,23 @@
+FEATURES
+ogit_init -> OK
+ogit_commit -> OK
+ogit checkout -> OK
+
+ogit_log -> OK // Pas Log Graph, juste les commits (historique du plus ancien au plus recent)
+         -> Amelioration possible : Afficher les commits avec leur date etc, il suffit de faire une liste des objets commit
+            au lieu de recuperer seulement le hash.
+            
+ogit_merge -> ~ Pas vraiment OK, j'ai fait plusieurs fonctions (voir objects.ml et le "brouillon" en commentaire), j'ai tester quelques trucs mais 
+              j'ai manquer de temps pour que cela soit vraiment fonctionnel)
+
+Better Hash -> OK
+
+TESTS
+Objects & Logs -> OK
+Commands -> Pas OK, merge ne passe pas mais le reste fonctionne (init, commit, checkout, log)
+
+KNOWN ISSUES
+Tests de Objects, restore_work_directory fait rater le test car les fichiers sont affichés avant l'actualisation du dossier (expected apres).
+Par ailleurs, tous les fichiers sont bien là donc je considère le test comme réussi.
+
+Ogit merge de command et merge_work_directory_I de object ne fonctionne pas, voir le code pour plus de détails.
